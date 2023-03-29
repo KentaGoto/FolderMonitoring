@@ -1,5 +1,7 @@
 $Seconds = 5 # Interval of seconds to monitor.
-$Path = "<FOLDER>" # Path to monitor.
+
+Write-Host "Folder: "
+$Path = Read-Host # Path to monitor.
 
 $monitoring = $true
 while ($monitoring) {
