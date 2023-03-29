@@ -4,10 +4,11 @@ Write-Host "Folder: "
 $Path = Read-Host # Path to monitor.
 
 $monitoring = $true
+$FistFileCount = (Get-ChildItem -Path $Path | Measure-Object).Count
 while ($monitoring) {
     $FileCount = (Get-ChildItem -Path $Path | Measure-Object).Count
 
-    if ($FileCount -eq 0) {
+    if ($FileCount -eq $FistFileCount) {
         for ($i = 0; $i -lt $Seconds; $i++) {
             $progressPercentage = ($i / $Seconds) * 100
             Write-Progress -Activity "Monitoring..." -Status "Waiting for files" -PercentComplete $progressPercentage
