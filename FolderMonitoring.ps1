@@ -22,9 +22,9 @@ while ($monitoring) {
 Write-Progress -Activity "Monitoring..." -Status "File detected" -Completed
 
 Write-Host ""
-Write-Host "┏━━━━━━━━━━━━━━━━━━━━━┓"
-Write-Host "┃It has been placed!!!┃"
-Write-Host "┗━━━━━━━━━━━━━━━━━━━━━┛"
+Write-Host "┏━━━━━━━━━━━━━━━━━┓"
+Write-Host "┃ With changes!!! ┃"
+Write-Host "┗━━━━━━━━━━━━━━━━━┛"
 Write-Host
 
 Pause
