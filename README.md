@@ -5,7 +5,7 @@ Simple folder monitoring script.
 ## Usage
 
 ```powershell
-./FolderMonitoring.ps1
+.\FolderMonitoring.ps1
 ```
 
 ## License
