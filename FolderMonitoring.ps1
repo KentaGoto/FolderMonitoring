@@ -1,5 +1,5 @@
 $Seconds = 5 # Interval of seconds to monitor.
-$Path = "\\nf-srv\temp\goto\test\t" # Path to monitor.
+$Path = "<FOLDER>" # Path to monitor.
 
 $monitoring = $true
 while ($monitoring) {
