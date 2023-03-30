@@ -18,6 +18,11 @@ You will need PowerShell installed on your system.
 1. Open the script in a text editor.
 2. Modify the `$Seconds` variable to set the interval (in seconds) to monitor the folder.
 3. Save the changes and run the script in PowerShell.
+
+    ```powershell
+    .\FolderMonitoring.ps1
+    ```
+
 4. When prompted, enter the folder path you want to monitor.
 
 ## Example
@@ -38,12 +43,6 @@ When a file is detected, the script logs the event with a timestamp in the speci
 ## Log File
 
 The log file (`log.log`) will be created in the same directory as the script. Each log entry includes a timestamp and the name of the detected file.
-
-## Usage
-
-```powershell
-.\FolderMonitoring.ps1
-```
 
 ## License
 
