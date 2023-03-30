@@ -1,11 +1,16 @@
 $Seconds = 5 # Interval of seconds to monitor.
 
+# Prompt the user for the folder path.
 Write-Host "Folder: "
-$Path = Read-Host # Path to monitor.
+$Path = Read-Host
+
+# Specify the log file path.
+$LogFilePath = "log.log"
 
 $monitoring = $true
 $FistFileCount = (Get-ChildItem -Path $Path | Measure-Object).Count
 while ($monitoring) {
+    $Files = Get-ChildItem -Path $Path
     $FileCount = (Get-ChildItem -Path $Path | Measure-Object).Count
 
     if ($FileCount -eq $FistFileCount) {
@@ -16,6 +21,13 @@ while ($monitoring) {
         }
     } else {
         $monitoring = $false
+
+        # Log the detected files.
+        foreach ($File in $Files) {
+            $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+            $logEntry = "$timestamp - File detected: $($File.Name)"
+            Add-Content -Path $LogFilePath -Value $logEntry
+        }
     }
 }
 
