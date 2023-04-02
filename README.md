@@ -45,7 +45,7 @@ When a file is detected, the script logs the event with a timestamp in the speci
 The log file (`log.log`) will be created in the same directory as the script. Each log entry includes a timestamp and the name of the detected file.
 
 ## Requirements  
-- PowerShell *Ubuntu and other Linuxes also work if PowerShell is installed.  
+- PowerShell *Ubuntu and other Linux also work if PowerShell is installed.  
 
 ## License
 
